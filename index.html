@@ -62,8 +62,17 @@ function render(){
    const hits=lay.placed.filter(p=>belongs(p,r,c)).map(p=>p.idx);
    const active=hits.includes(activeWord);
    let ch='';
-   if(active){const p=lay.placed.find(x=>x.idx===activeWord);const pos=p.d==='h'?c-p.c:r-p.r;ch=norm(answer)[pos]||''}
-   html+=`<div class="sq ${active?'active':''} ${solved[activeWord]?'good':''}" data-r="${r}" data-c="${c}">${ch}</div>`;
+   const solvedHit=hits.find(i=>solved[i]);
+   if(solvedHit!==undefined){
+     const p=lay.placed.find(x=>x.idx===solvedHit);
+     const pos=p.d==='h'?c-p.c:r-p.r;
+     ch=p.w[pos]||'';
+   }else if(active){
+     const p=lay.placed.find(x=>x.idx===activeWord);
+     const pos=p.d==='h'?c-p.c:r-p.r;
+     ch=norm(answer)[pos]||'';
+   }
+   html+=`<div class="sq ${active?'active':''} ${solvedHit!==undefined?'good':''}" data-r="${r}" data-c="${c}">${ch}</div>`;
  }
  $('grid').innerHTML=html;
  document.querySelectorAll('.sq').forEach(x=>x.onclick=()=>select(+x.dataset.r,+x.dataset.c,lay));
