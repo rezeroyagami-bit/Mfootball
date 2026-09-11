@@ -1,107 +1,41 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>معلوماتي</title>
 <style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0,#315d78,#07131f 72%);color:#fff;font-family:Tahoma,Arial,sans-serif}.app{max-width:720px;margin:auto;padding:12px}.top{display:flex;justify-content:space-between;align-items:center;background:#ffffff14;border:1px solid #ffffff22;border-radius:22px;padding:12px 15px}.brand{font-size:22px;font-weight:900}.stats{display:flex;gap:6px}.pill{background:#0005;border-radius:13px;padding:7px 10px;font-weight:900}.screen{display:none}.screen.active{display:block}.hero{text-align:center;padding:25px 10px 18px}.logo{font-size:62px}h1{font-size:38px;margin:3px 0}.hero p{color:#b9cbd8}.card{background:linear-gradient(145deg,#ffffff16,#ffffff08);border:1px solid #ffffff20;border-radius:25px;padding:16px}.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.level{aspect-ratio:1;border:1px solid #ffffff20;border-radius:18px;background:#ffffff0d;color:#fff;font-size:20px;font-weight:900}.level small{display:block;font-size:10px;color:#a9bfce;margin-top:5px}.level.done{background:#176b54}.level:disabled{opacity:.3}.gamehead{display:flex;align-items:center;justify-content:space-between;margin:12px 0}.back{border:0;border-radius:13px;padding:9px 12px;background:#ffffff14;color:#fff}.topic{text-align:center;color:#b9cbd8;font-size:13px;margin:4px 0 12px}.cluebox{background:#091824;border-radius:18px;padding:13px;margin-bottom:14px}.clueNo{color:#e9bd49;font-weight:900;font-size:13px}.clue{font-size:19px;font-weight:800;line-height:1.5;margin-top:4px}.photo{width:100%;max-height:230px;object-fit:cover;border-radius:15px;margin-top:10px;border:1px solid #ffffff22}.hint{text-align:center;color:#9fb4c2;font-size:12px;margin:5px 0 12px}.grid{--cell:42px;display:grid;gap:0;justify-content:center;margin:10px auto 18px;overflow:auto;max-width:100%;touch-action:manipulation}.sq,.void{width:var(--cell);height:var(--cell)}.sq{border:1px solid #526d7d;background:#102331;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:900;cursor:pointer;position:relative}.void{visibility:hidden}.sq.active{background:#304d60;border-color:#e6b942;box-shadow:inset 0 0 0 2px #e6b942}.sq.good{background:#176b54;color:#fff}.native{position:fixed;opacity:0;width:1px;height:1px;left:0;bottom:0;border:0;padding:0}.msg{text-align:center;min-height:25px;margin:6px;font-weight:900}.big{width:100%;border:0;border-radius:15px;padding:15px;margin-top:8px;background:linear-gradient(135deg,#f2c14e,#d89220);color:#18120a;font-size:17px;font-weight:900}.secondary{background:#ffffff13;color:#fff}.win{position:fixed;inset:0;background:#020b13ee;display:none;align-items:center;justify-content:center;padding:20px;z-index:9}.win.show{display:flex}.winbox{width:min(430px,100%);text-align:center;background:linear-gradient(145deg,#18334a,#0b1b2a);border:1px solid #ffffff25;border-radius:28px;padding:25px}.emoji{font-size:62px}@media(max-width:430px){.grid{--cell:35px}.sq{font-size:17px}.level{font-size:18px}}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0,#315d78,#07131f 72%);color:#fff;font-family:Tahoma,Arial,sans-serif}.app{max-width:720px;margin:auto;padding:12px}.top{display:flex;justify-content:space-between;align-items:center;background:#ffffff14;border:1px solid #ffffff22;border-radius:22px;padding:12px 15px}.brand{font-size:22px;font-weight:900}.stats{display:flex;gap:6px}.pill{background:#0005;border-radius:13px;padding:7px 10px;font-weight:900}.screen{display:none}.screen.active{display:block}.hero{text-align:center;padding:25px 10px 18px}.logo{font-size:62px}h1{font-size:38px;margin:3px 0}.hero p{color:#b9cbd8}.card{background:linear-gradient(145deg,#ffffff16,#ffffff08);border:1px solid #ffffff20;border-radius:25px;padding:16px}.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.level{aspect-ratio:1;border:1px solid #ffffff20;border-radius:18px;background:#ffffff0d;color:#fff;font-size:20px;font-weight:900}.level small{display:block;font-size:10px;color:#a9bfce;margin-top:5px}.level.done{background:#176b54}.level:disabled{opacity:.3}.gamehead{display:flex;align-items:center;justify-content:space-between;margin:12px 0}.back{border:0;border-radius:13px;padding:9px 12px;background:#ffffff14;color:#fff}.topic{text-align:center;color:#b9cbd8;font-size:13px;margin:4px 0 12px}.cluebox{background:#091824;border-radius:18px;padding:13px;margin-bottom:14px}.clueNo{color:#e9bd49;font-weight:900;font-size:13px}.clue{font-size:19px;font-weight:800;line-height:1.5;margin-top:4px}.photo{width:100%;max-height:210px;object-fit:cover;border-radius:15px;margin-top:10px;border:1px solid #ffffff22}.hint{text-align:center;color:#9fb4c2;font-size:12px;margin:5px 0 12px}.board{display:flex;justify-content:center;padding:12px;background:#07131d;border-radius:22px;border:2px solid #526d7d;box-shadow:inset 0 0 0 4px #0d2432;margin-bottom:15px}.grid{--cell:39px;display:grid;gap:2px;justify-content:center;touch-action:manipulation}.sq,.void{width:var(--cell);height:var(--cell)}.sq{border:1px solid #607b8a;background:#102b3a;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;cursor:pointer;border-radius:3px}.void{background:#030b11;border:1px solid #07131a;border-radius:3px}.sq.active{background:#304d60;border-color:#e6b942;box-shadow:inset 0 0 0 2px #e6b942}.sq.good{background:#176b54;color:#fff}.native{position:fixed;opacity:0;width:1px;height:1px;left:0;bottom:0;border:0;padding:0}.msg{text-align:center;min-height:25px;margin:6px;font-weight:900}.big{width:100%;border:0;border-radius:15px;padding:15px;margin-top:8px;background:linear-gradient(135deg,#f2c14e,#d89220);color:#18120a;font-size:17px;font-weight:900}.secondary{background:#ffffff13;color:#fff}.win{position:fixed;inset:0;background:#020b13ee;display:none;align-items:center;justify-content:center;padding:20px;z-index:9}.win.show{display:flex}.winbox{width:min(430px,100%);text-align:center;background:linear-gradient(145deg,#18334a,#0b1b2a);border:1px solid #ffffff25;border-radius:28px;padding:25px}.emoji{font-size:62px}@media(max-width:430px){.grid{--cell:32px}.sq{font-size:16px}.board{padding:8px}.level{font-size:18px}}
 </style>
 </head>
 <body>
-<main class="app">
-<div class="top"><div class="brand">🧩 معلوماتي</div><div class="stats"><span class="pill">⭐ <b id="points">0</b></span><span class="pill">🔥 <b id="streak">0</b></span></div></div>
+<main class="app"><div class="top"><div class="brand">🧩 معلوماتي</div><div class="stats"><span class="pill">⭐ <b id="points">0</b></span><span class="pill">🔥 <b id="streak">0</b></span></div></div>
 <section id="home" class="screen active"><div class="hero"><div class="logo">🧠</div><h1>معلوماتي</h1><p>ألغاز • كلمات متقاطعة • أسئلة بالصور</p></div><div class="card"><h2>المراحل</h2><div id="levels" class="levels"></div></div></section>
-<section id="game" class="screen"><div class="gamehead"><button class="back" id="back">← المراحل</button><b>المرحلة <span id="num"></span></b><span class="pill">⭐ <span id="gpoints">0</span></span></div><div class="topic" id="topic"></div><div id="clue"></div><div class="card"><div class="hint">اضغط على كلمة لاختيارها، واضغط عليها مرة أخرى لتغيير الاتجاه</div><div id="grid" class="grid"></div><input id="native" class="native" type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off"><div id="msg" class="msg"></div><button class="big secondary" id="clear">مسح</button></div></section>
-</main>
+<section id="game" class="screen"><div class="gamehead"><button class="back" id="back">← المراحل</button><b>المرحلة <span id="num"></span></b><span class="pill">⭐ <span id="gpoints">0</span></span></div><div class="topic" id="topic"></div><div id="clue"></div><div class="card"><div class="hint">اختر الكلمة ثم اكتب الإجابة. الحروف الصحيحة تبقى ظاهرة في الصندوق.</div><div class="board"><div id="grid" class="grid"></div></div><input id="native" class="native" type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off"><div id="msg" class="msg"></div><button class="big secondary" id="clear">مسح</button></div></section></main>
 <div id="win" class="win"><div class="winbox"><div class="emoji">🎉</div><h2>أحسنت!</h2><p id="wintext"></p><button class="big" id="next">المرحلة التالية</button><button class="big secondary" id="winback">العودة للمراحل</button></div></div>
 <script>
 const IMG={mask:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Mask_of_Tutankhamun.svg',lightning:'https://commons.wikimedia.org/wiki/Special:Redirect/file/LightningImage.jpg'};
 const stages=[
-{title:'عالم الحيوان',words:[['دولفين','ثديي بحري ذكي يستخدم تحديد الموقع بالصدى'],['فيل','حيوان ضخم يتميز بخرطوم طويل',null,3],['نمر','حيوان مفترس مخطط',null,5],['ليل','الفترة التي تغيب فيها الشمس',null,2],['دب','حيوان ثديي يعيش في بيئات مختلفة',null,0]]},
-{title:'ألغاز بالصور',words:[['قناع','ما الشيء الذهبي الظاهر في الصورة؟',IMG.mask],['برق','ما الظاهرة الجوية الظاهرة في الصورة؟',IMG.lightning,0],['نسر','ما الطائر الجارح في السؤال؟',null,1],['اسد','حيوان مفترس يلقب بملك الغابة',null,2],['عشب','نبات أخضر يغطي مساحات من الأرض',null,3]]},
-{title:'الفضاء',words:[['مجرة','تجمع هائل من النجوم والغاز والغبار'],['جسم','شيء له كتلة ويشغل حيزاً من المكان',null,1],['نور','إشعاع يجعل الأشياء مرئية',null,2],['نهر','مجرى مائي طبيعي',null,3],['قمر','جسم يدور حول كوكب',null,0]]},
-{title:'مصر القديمة',words:[['مومياء','جثمان حُفظ بطريقة خاصة في مصر القديمة'],['ملك','حاكم أو صاحب سلطة',null,0],['هواء','ما يحيط بنا ونتنفسه',null,1],['بيت','مكان للسكن',null,3],['شيء','لفظ عام يدل على موجود أو أمر',null,5]]},
-{title:'الطقس والسماء',words:[['صاعقة','تفريغ كهربائي قوي يصل إلى الأرض'],['صقر','طائر جارح قوي',null,0],['اسد','حيوان مفترس يلقب بملك الغابة',null,1],['عين','عضو الإبصار في الإنسان',null,2],['برق','تفريغ كهربائي مرئي في الغلاف الجوي',IMG.lightning,3]]},
-{title:'تفكير ومعلومات',words:[['محيط','مسطح مائي هائل يحيط بالقارات'],['نيل','نهر شهير يمر في مصر',null,2],['شمس','النجم الأقرب إلى الأرض',null,0],['مفتاح','أداة تفتح قفلاً',null,1],['طائر','حيوان له ريش ومنقار',null,3]]},
-{title:'علوم',words:[['كهرباء','نوع من الطاقة يرتبط بالشحنات الكهربائية'],['كتاب','مجموعة صفحات مكتوبة أو مطبوعة',null,0],['نهر','مجرى مائي طبيعي',null,1],['نور','إشعاع يجعل الأشياء مرئية',null,2],['بحر','مسطح مائي أصغر من المحيط عادة',null,3]]},
-{title:'تحدي سريع',words:[['منارة','بناء مرتفع يُهتدى به أو يدل على موقع'],['نسر','طائر جارح قوي',null,1],['اسد','حيوان مفترس يلقب بملك الغابة',null,2],['بحر','مسطح مائي أصغر من المحيط عادة',null,3],['قمر','تابع طبيعي لكوكب',null,0]]}
+{title:'البداية',words:[['قط','حيوان أليف صغير'],['شمس','نجم نراه نهاراً'],['بحر','مسطح مائي واسع'],['قمر','جسم نراه ليلاً'],['فيل','حيوان ضخم له خرطوم'],['نحلة','حشرة تنتج العسل']]},
+{title:'سهل',words:[['دولفين','ثديي يعيش في البحر'],['نمر','حيوان مفترس مخطط'],['مطر','ماء ينزل من السحب'],['نسر','طائر جارح قوي'],['هرم','بناء هندسي شهير'],['مفتاح','أداة تفتح القفل']]},
+{title:'متوسط',words:[['مجرة','تجمع هائل من النجوم'],['بوصلة','أداة تحدد الاتجاهات'],['بركان','جبل قد يقذف الحمم'],['مومياء','جثمان حُفظ بطريقة خاصة'],['زرافة','حيوان طويل الرقبة'],['كهرباء','طاقة مرتبطة بالشحنات']]},
+{title:'متوسط+',words:[['ديناصور','حيوان عاش في عصور قديمة'],['محيط','مسطح مائي هائل يحيط بالقارات'],['صاعقة','تفريغ كهربائي قوي يصل إلى الأرض'],['حضارة','مجتمع متقدم له نظم وثقافة'],['جاذبية','قوة تجذب الأجسام نحو بعضها'],['مغناطيس','جسم يجذب بعض المعادن']]},
+{title:'صعب',words:[['فوتوسينثيز','عملية تصنع بها النباتات غذاءها من الضوء'],['استوائية','منطقة قريبة من خط الاستواء'],['كوكبة','مجموعة نجوم تبدو كأنها شكل معين'],['زئبق','أقرب كوكب إلى الشمس'],['تلسكوب','أداة لرؤية الأجرام البعيدة'],['احتباس','ظاهرة ارتفاع حرارة الغلاف الجوي']]},
+{title:'صعب جداً',words:[['كروموسوم','بنية تحمل المادة الوراثية داخل الخلية'],['ميكروسكوب','أداة تكبر الأجسام الدقيقة'],['ديناميكا','فرع من الميكانيكا يدرس الحركة والقوى'],['فسيولوجيا','علم وظائف أعضاء الكائنات الحية'],['أحفورة','بقايا أو آثار كائنات قديمة محفوظة'],['مجرة','نظام هائل من النجوم والغاز والغبار']]},
+{title:'خبير',words:[['أنثروبولوجيا','علم يدرس الإنسان وثقافاته وتطوره'],['جيولوجيا','علم يدرس الأرض وبنيتها وتاريخها'],['كهرومغناطيسية','مجال يدرس العلاقة بين الكهرباء والمغناطيسية'],['ميثولوجيا','دراسة الأساطير ومجموعاتها'],['فلكلوري','ما يتعلق بالموروث الشعبي'],['بيولوجيا','علم دراسة الكائنات الحية']]},
+{title:'التحدي النهائي',words:[['فلسفة','بحث عقلي في قضايا الوجود والمعرفة والقيم'],['فيزياء','علم يدرس المادة والطاقة والقوانين الطبيعية'],['استعمار','سيطرة دولة على أرض أو شعب خارج حدودها'],['ديمقراطية','نظام يقوم على مشاركة الشعب في الحكم'],['معلوماتية','مجال يهتم بمعالجة المعلومات حاسوبياً'],['حضارة','منظومة متكاملة من منجزات مجتمع ما']]}
 ];
 let current=0,activeWord=0,answer='',points=+localStorage.mpoints||0,streak=+localStorage.mstreak||0,done=JSON.parse(localStorage.mdone||'[]'),solved={};
-const $=id=>document.getElementById(id);
-function norm(s){return String(s).replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').replace(/ـ/g,'').replace(/\s/g,'')}
+const $=id=>document.getElementById(id);function norm(s){return String(s).replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').replace(/ـ/g,'').replace(/\s/g,'')}
 function save(){localStorage.mpoints=points;localStorage.mstreak=streak;localStorage.mdone=JSON.stringify(done);$('points').textContent=points;$('streak').textContent=streak;$('gpoints').textContent=points}
 function show(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id).classList.add('active')}
-function levels(){let h='';stages.forEach((s,i)=>{const locked=i>0&&!done.includes(i-1);h+=`<button class="level ${done.includes(i)?'done':''}" ${locked?'disabled':''} data-i="${i}">${done.includes(i)?'✓':i+1}<small>${s.title}</small></button>`});$('levels').innerHTML=h;document.querySelectorAll('.level').forEach(b=>b.onclick=()=>openStage(+b.dataset.i))}
-function build(){
- const ws=stages[current].words.map(x=>norm(x[0]));
- const central=ws[0];
- const size=25,mid=Math.floor(size/2),start=mid-Math.floor(central.length/2);
- const cells={};
- for(let k=0;k<central.length;k++)cells[`${start+k},${mid}`]=central[k];
- const placed=[{idx:0,w:central,r:start,c:mid,d:'v'}];
- for(let i=1;i<ws.length;i++){
-   const w=ws[i], wanted=stages[current].words[i][3];
-   const cross=w.indexOf(central[wanted]);
-   const r=start+wanted,c=mid-cross;
-   for(let k=0;k<w.length;k++)cells[`${r},${c+k}`]=w[k];
-   placed.push({idx:i,w,r,c,d:'h'});
- }
- let minR=size,maxR=0,minC=size,maxC=0;
- Object.keys(cells).forEach(key=>{const [r,c]=key.split(',').map(Number);minR=Math.min(minR,r);maxR=Math.max(maxR,r);minC=Math.min(minC,c);maxC=Math.max(maxC,c)});
- return{cells,placed,minR,maxR,minC,maxC};
-}
-function belongs(p,r,c){return p.d==='h'?r===p.r&&c>=p.c&&c<p.c+p.w.length:c===p.c&&r>=p.r&&r<p.r+p.w.length}
-function render(){
- const lay=build(),cols=lay.maxC-lay.minC+1;
- $('grid').style.gridTemplateColumns=`repeat(${cols},var(--cell))`;
- let html='';
- for(let r=lay.minR;r<=lay.maxR;r++)for(let c=lay.minC;c<=lay.maxC;c++){
-   const key=`${r},${c}`;
-   if(!lay.cells[key]){html+='<div class="void"></div>';continue}
-   const hits=lay.placed.filter(p=>belongs(p,r,c)).map(p=>p.idx);
-   const active=hits.includes(activeWord);
-   let ch='';
-   const solvedHit=hits.find(i=>solved[i]);
-   if(solvedHit!==undefined){
-     const p=lay.placed.find(x=>x.idx===solvedHit);
-     const pos=p.d==='h'?c-p.c:r-p.r;
-     ch=p.w[pos]||'';
-   }else if(active){
-     const p=lay.placed.find(x=>x.idx===activeWord);
-     const pos=p.d==='h'?c-p.c:r-p.r;
-     ch=norm(answer)[pos]||'';
-   }
-   html+=`<div class="sq ${active?'active':''} ${solvedHit!==undefined?'good':''}" data-r="${r}" data-c="${c}">${ch}</div>`;
- }
- $('grid').innerHTML=html;
- document.querySelectorAll('.sq').forEach(x=>x.onclick=()=>select(+x.dataset.r,+x.dataset.c,lay));
- renderClue(lay);
-}
-function select(r,c,lay){
- const hits=lay.placed.filter(p=>belongs(p,r,c)).map(p=>p.idx);
- if(!hits.length)return;
- if(hits.includes(activeWord)&&hits.length>1)activeWord=hits[(hits.indexOf(activeWord)+1)%hits.length];else activeWord=hits[0];
- answer=solved[activeWord]?norm(stages[current].words[activeWord][0]):'';$('native').value=answer;render();focusInput();
-}
-function renderClue(lay){const w=stages[current].words[activeWord],p=lay.placed.find(x=>x.idx===activeWord);$('clue').innerHTML=`<div class="cluebox"><div class="clueNo">${p.d==='h'?'أفقي':'عمودي'} • السؤال ${activeWord+1}</div><div class="clue">${w[1]}</div>${w[2]?`<img class="photo" src="${w[2]}" alt="صورة السؤال">`:''}</div>`}
-function focusInput(){const n=$('native');n.focus();try{n.setSelectionRange(n.value.length,n.value.length)}catch(e){}}
-function autoCheck(){
- const w=norm(stages[current].words[activeWord][0]);
- answer=norm($('native').value).slice(0,w.length);$('native').value=answer;render();
- if(answer.length===w.length){
-   if(answer===w){solved[activeWord]=true;points+=10;streak++;save();$('msg').textContent='✅ صحيح';setTimeout(nextWord,300)}
-   else{$('msg').textContent='❌ غير صحيح';streak=0;save();setTimeout(()=>{answer='';$('native').value='';$('msg').textContent='';render();focusInput()},500)}
- }
-}
-function nextWord(){const all=stages[current].words.every((_,i)=>solved[i]);if(all){if(!done.includes(current))done.push(current);points+=50;save();$('wintext').textContent='أكملت المرحلة بنجاح — +50 نقطة';$('win').classList.add('show')}else{activeWord=stages[current].words.findIndex((_,i)=>!solved[i]);answer='';$('native').value='';$('msg').textContent='';render();focusInput()}}
+function levels(){let h='';stages.forEach((s,i)=>{let locked=i>0&&!done.includes(i-1);h+=`<button class="level ${done.includes(i)?'done':''}" ${locked?'disabled':''} data-i="${i}">${done.includes(i)?'✓':i+1}<small>${s.title}</small></button>`});$('levels').innerHTML=h;document.querySelectorAll('.level').forEach(b=>b.onclick=()=>openStage(+b.dataset.i))}
+function makeLayout(){const words=stages[current].words.map(x=>norm(x[0]));let size=15;let g=Array.from({length:size},()=>Array(size).fill(''));let pos=[];let order=[...words.keys()].sort((a,b)=>words[b].length-words[a].length);function fits(w,r,c,d){for(let k=0;k<w.length;k++){let rr=r+(d==='v'?k:0),cc=c+(d==='h'?k:0);if(rr<1||rr>=size-1||cc<1||cc>=size-1)return false;let x=g[rr][cc];if(x&&x!==w[k])return false}return true}function put(w,r,c,d,idx){for(let k=0;k<w.length;k++){let rr=r+(d==='v'?k:0),cc=c+(d==='h'?k:0);g[rr][cc]=w[k]}pos.push({idx,w,r,c,d})}let first=order[0],w=words[first];put(w,Math.floor(size/2)-Math.floor(w.length/2),Math.floor(size/2),'h',first);for(let oi=1;oi<order.length;oi++){let idx=order[oi],ww=words[idx],placed=false;for(let tries=0;tries<400&&!placed;tries++){let base=pos[Math.floor(Math.random()*pos.length)],d=base.d==='h'?'v':'h';let common=[];for(let a=0;a<ww.length;a++)for(let b=0;b<base.w.length;b++)if(ww[a]===base.w[b])common.push([a,b]);if(!common.length)continue;let [a,b]=common[Math.floor(Math.random()*common.length)];let r=base.r+(base.d==='v'?b:0)-(d==='v'?a:0),c=base.c+(base.d==='h'?b:0)-(d==='h'?a:0);if(fits(ww,r,c,d)){put(ww,r,c,d,idx);placed=true}}if(!placed){for(let r=2;r<size-2&&!placed;r++)for(let c=2;c<size-2&&!placed;c++)for(let d of ['h','v'])if(fits(ww,r,c,d)){put(ww,r,c,d,idx);placed=true}}}let min=1,max=size-2;return{g,pos,min,max}}
+function render(){let L=makeLayout();window.layout=L;let n=L.max-L.min+1;$('grid').style.gridTemplateColumns=`repeat(${n},var(--cell))`;let h='';for(let r=L.min;r<=L.max;r++)for(let c=L.min;c<=L.max;c++){let ch=L.g[r][c];if(!ch){h+='<div class="void"></div>';continue}let hits=L.pos.filter(p=>p.r<=r&&p.c<=c&&(p.d==='h'?r===p.r&&c<p.c+p.w.length:c===p.c&&r<p.r+p.w.length)).map(p=>p.idx);let si=hits.find(i=>solved[i]);let text='';if(si!==undefined){let p=L.pos.find(x=>x.idx===si);text=p.w[p.d==='h'?c-p.c:r-p.r]}else if(hits.includes(activeWord)){let p=L.pos.find(x=>x.idx===activeWord);text=norm(answer)[p.d==='h'?c-p.c:r-p.r]||''}h+=`<div class="sq ${hits.includes(activeWord)?'active':''} ${si!==undefined?'good':''}" data-r="${r}" data-c="${c}">${text}</div>`}$('grid').innerHTML=h;document.querySelectorAll('.sq').forEach(x=>x.onclick=()=>select(+x.dataset.r,+x.dataset.c));renderClue()}
+function select(r,c){let hits=layout.pos.filter(p=>p.r<=r&&p.c<=c&&(p.d==='h'?r===p.r&&c<p.c+p.w.length:c===p.c&&r<p.r+p.w.length)).map(p=>p.idx);if(!hits.length)return;if(hits.includes(activeWord)&&hits.length>1)activeWord=hits[(hits.indexOf(activeWord)+1)%hits.length];else activeWord=hits[0];answer=solved[activeWord]?norm(stages[current].words[activeWord][0]):'';$('native').value=answer;render();focusInput()}
+function renderClue(){let w=stages[current].words[activeWord],html=`<div class="cluebox"><div class="clueNo">السؤال ${activeWord+1}</div><div class="clue">${w[1]}</div>${w[2]?`<img class="photo" src="${w[2]}">`:''}</div>`;$('clue').innerHTML=html}
+function focusInput(){let n=$('native');n.focus();try{n.setSelectionRange(n.value.length,n.value.length)}catch(e){}}
+function autoCheck(){let w=norm(stages[current].words[activeWord][0]);answer=norm($('native').value).slice(0,w.length);$('native').value=answer;render();if(answer.length===w.length){if(answer===w){solved[activeWord]=true;points+=10;streak++;save();$('msg').textContent='✅ صحيح';setTimeout(nextWord,450)}else{$('msg').textContent='❌ حاول مرة أخرى';streak=0;save();setTimeout(()=>{$('msg').textContent='';answer='';$('native').value='';render();focusInput()},650)}}}
+function nextWord(){if(stages[current].words.every((_,i)=>solved[i])){if(!done.includes(current))done.push(current);points+=50;save();$('wintext').textContent='أكملت المرحلة بنجاح — +50 نقطة';$('win').classList.add('show')}else{activeWord=stages[current].words.findIndex((_,i)=>!solved[i]);answer='';$('native').value='';$('msg').textContent='';render();focusInput()}}
 function openStage(i){current=i;activeWord=0;answer='';solved={};$('num').textContent=i+1;$('topic').textContent=stages[i].title;$('msg').textContent='';$('win').classList.remove('show');show('game');render();setTimeout(focusInput,180)}
-$('native').addEventListener('input',autoCheck);
-$('clear').onclick=()=>{answer='';$('native').value='';$('msg').textContent='';render();focusInput()};
-$('back').onclick=()=>{levels();show('home')};
-$('winback').onclick=()=>{$('win').classList.remove('show');levels();show('home')};
-$('next').onclick=()=>{$('win').classList.remove('show');const n=current+1;if(n<stages.length)openStage(n);else{levels();show('home')}};
-save();levels();
-</script>
-</body>
-</html>
+$('native').addEventListener('input',autoCheck);$('clear').onclick=()=>{answer='';$('native').value='';$('msg').textContent='';render();focusInput()};$('back').onclick=()=>{levels();show('home')};$('winback').onclick=()=>{$('win').classList.remove('show');levels();show('home')};$('next').onclick=()=>{$('win').classList.remove('show');let n=current+1;if(n<stages.length)openStage(n);else{levels();show('home')}};save();levels();
+</script></body></html>
