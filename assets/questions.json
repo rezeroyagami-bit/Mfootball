@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "description": "محتوى أسئلة وصور للعبة معلوماتي",
+  "imageQuestions": [
+    {"question":"ما الحيوان الظاهر في الصورة؟","answer":"باندا","category":"حيوانات","image":"https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG"},
+    {"question":"ما المعلم الظاهر في الصورة؟","answer":"اهرامات","category":"تاريخ وحضارة","image":"https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg"},
+    {"question":"ما الكوكب الظاهر في الصورة؟","answer":"المريخ","category":"فضاء","image":"https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg"},
+    {"question":"ما الكائن البحري الظاهر في الصورة؟","answer":"اخطبوط","category":"علوم","image":"https://upload.wikimedia.org/wikipedia/commons/5/57/Octopus2.jpg"}
+  ],
+  "riddles": [
+    {"question":"شيء كلما أخذت منه كبر، فما هو؟","answer":"حفرة","category":"ألغاز"},
+    {"question":"ما الشيء الذي له أسنان ولا يعض؟","answer":"مشط","category":"ألغاز"},
+    {"question":"ما الذي يمشي بلا أرجل ويبكي بلا عيون؟","answer":"سحاب","category":"ألغاز"},
+    {"question":"ما الشيء الذي إذا زاد نقص؟","answer":"العمر","category":"ألغاز"}
+  ]
+}
